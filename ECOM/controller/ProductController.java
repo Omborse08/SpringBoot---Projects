@@ -18,8 +18,8 @@ public class ProductController {
     private ProductService service;
 
     @GetMapping("/ALL")
-    public List getAll() {
-        return service.getAllProduct();
+    public ResponseEntity<List<Product>> getAll() {
+        return new ResponseEntity<>(service.getAllProduct(),HttpStatus.OK);
     }
 
     @PostMapping("/SEND")
