@@ -21,7 +21,7 @@ public class ProductService {
         database.deleteById(id);
     }
 
-    public List getAllProduct() {
+    public List<Product> getAllProduct() {
         return database.findAll();
     }
 
